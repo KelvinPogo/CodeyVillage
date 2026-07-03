@@ -22,6 +22,10 @@ export default function PhaserGame({ roomId }: Props) {
   useEffect(() => {
     const uid = auth.currentUser?.uid ?? localStorage.getItem('firebaseUid');
     if (!uid) return;
+    if (process.env.NODE_ENV === 'development') {
+      setCoins(100000);
+      return;
+    }
     fetch(`${BACKEND_URL}/coins/${uid}`)
       .then((r) => r.ok ? r.json() : null)
       .then((data) => { if (data?.coins != null) setCoins(data.coins); })
