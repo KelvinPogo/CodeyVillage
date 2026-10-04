@@ -1,4 +1,4 @@
-# Codey Village!!!
+# Codey Village!!
 
 **Codey Village** is a gamified developer productivity platform that rewards real-world coding activity with in-game currency. Solve a LeetCode problem, push a GitHub commit, or submit a job application — and watch your village grow.
 
